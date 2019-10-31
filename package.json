@@ -10,6 +10,11 @@
   },
   "scripts": {
     "format": "prettier --write *.ts **/*.ts",
-    "watch": "webpack-cli -w"
+    "watch": "webpack-cli -w",
+    "serve": "nf start"
+  },
+  "dependencies": {
+    "bsqr": "^1.0.1",
+    "foreman": "^3.0.1"
   }
 }

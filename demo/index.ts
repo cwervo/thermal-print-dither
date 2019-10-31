@@ -5,6 +5,8 @@ const canvas = document.querySelector("canvas") as HTMLCanvasElement;
 canvasDraw(canvas);
 const ctx = canvas.getContext("2d")!;
 
+console.log("hello, from TS!")
+
 function drawDitheredImage() {
     // const ditheredImagePath = "./Michelangelo's_David_-_Bayer.png";
     // const ditheredImage = document.createElement("img");
