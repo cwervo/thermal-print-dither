@@ -7,6 +7,10 @@ const ctx = canvas.getContext("2d")!;
 
 console.log("hello, from TS!")
 
+function drawImageOnContext(image, context, ratio=1.0) {
+    context.drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight, 0, 0, image.naturalWidth * ratio, image.naturalHeight * ratio); // double tall
+}
+
 function drawDitheredImage() {
     // const ditheredImagePath = "./Michelangelo's_David_-_Bayer.png";
     // const ditheredImage = document.createElement("img");
@@ -14,9 +18,22 @@ function drawDitheredImage() {
     const ditheredImage = document.querySelector('img');
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 215);
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 360, 215); // double wide
-    ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 430); // double tall
+    // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 430); // double tall
+
+    drawImageOnContext(ditheredImage, ctx)
+
+    console.log("----", ditheredImage.naturalWidth);
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 860); // double tall
 
+    // draw firework 1:1
+    // ctx.drawImage(ditheredImage, 0, 0, 225, 225, 0, 0, 180, 215);
+    // draw portrait from Unsplash
+    // TODO: A function that reads in the pixel size, & allows you to downsize by specifying a percentage 0.0-1.0 (1.0 by default)
+    // ctx.drawImage(ditheredImage, 0, 0, 320, 480, 0, 0, 320, 480); // portrait, original size
+    // ctx.drawImage(ditheredImage, 0, 0, 320, 480, 0, 0, 320, 480); // * 0.5, prints completely black!
+    // ctx.drawImage(ditheredImage, 0, 0, 320, 480, 0, 0, 480, 720); // * 1.5
+    // Exposed portrait:
+    // ctx.drawImage(ditheredImage, 0, 0, 232, 348, 0, 0, 464, 696); // * 1.5
 }
 // I have NO IDEA why, but without `window.d =` this fails to draw ...
 // must be some canvas context race condition ... or TS access issue to the DOM?!
