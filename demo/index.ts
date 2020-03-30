@@ -1,11 +1,12 @@
 import { reset, setCharacterStyle, printImage } from "../driver";
 import { canvasDraw } from "./canvas_draw";
+import * as floydSteinberg from "floyd-steinberg";
 
 const canvas = document.querySelector("canvas") as HTMLCanvasElement;
 canvasDraw(canvas);
 const ctx = canvas.getContext("2d")!;
 
-console.log("hello, from TS!")
+console.log("👋🏼");
 
 function drawImageOnContext(image, context, ratio=1.0) {
     context.drawImage(image, 0, 0, image.naturalWidth, image.naturalHeight, 0, 0, image.naturalWidth * ratio, image.naturalHeight * ratio); // double tall
@@ -16,13 +17,16 @@ function drawDitheredImage() {
     // const ditheredImage = document.createElement("img");
     // ditheredImage.src = ditheredImagePath;
     const ditheredImage = document.querySelector('img');
+
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 215);
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 360, 215); // double wide
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 430); // double tall
 
-    drawImageOnContext(ditheredImage, ctx)
+    drawImageOnContext(ditheredImage, ctx, 1.5)
+    let ditherImage = floydSteinberg(ctx.getImageData(0, 0, canvas.width, canvas.height));
+    console.log(ditherImage);
+    ctx.putImageData(ditherImage, 0, 0);
 
-    console.log("----", ditheredImage.naturalWidth);
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 860); // double tall
 
     // draw firework 1:1
