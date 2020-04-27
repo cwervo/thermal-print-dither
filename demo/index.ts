@@ -22,7 +22,7 @@ function drawDitheredImage() {
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 360, 215); // double wide
     // ctx.drawImage(ditheredImage, 0, 0, 180, 215, 0, 0, 180, 430); // double tall
 
-    drawImageOnContext(ditheredImage, ctx, 1.5)
+    drawImageOnContext(ditheredImage, ctx, 1.1)
     let ditherImage = floydSteinberg(ctx.getImageData(0, 0, canvas.width, canvas.height));
     console.log(ditherImage);
     ctx.putImageData(ditherImage, 0, 0);
