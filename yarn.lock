@@ -2,15 +2,43 @@
 # yarn lockfile v1
 
 
+"@google/3dom@0.0.1-alpha.3":
+  version "0.0.1-alpha.3"
+  resolved "https://registry.yarnpkg.com/@google/3dom/-/3dom-0.0.1-alpha.3.tgz#fa3dc1f49106b487511c12f5168f4e24080f1a08"
+  integrity sha512-zKMYdhFosEczvdglEpL+AJwcfc/1C+Y4Fks3XXaJvl32LwMhSlfhR+KQsXzEQ0OsSNgD/rahwgXwUkh5QEFlwg==
+  dependencies:
+    three "^0.113.2"
+
+"@google/model-viewer@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@google/model-viewer/-/model-viewer-0.9.0.tgz#dc694be867e5b315dccf3037b29a0b63fbaeca2c"
+  integrity sha512-wgHBOzJGnKSWln5s4+8r9Jsf9/g7LOU2xgjCVt6Wz4ikahgrmt3yvRC6J2dEsns7RkdQFMwR3qiZCSgtsp7UTw==
+  dependencies:
+    "@google/3dom" "0.0.1-alpha.3"
+    "@types/resize-observer-browser" "^0.1.2"
+    "@types/webgl2" "^0.0.5"
+    lit-element "^2.2.0"
+    three "^0.113.2"
+
 "@types/es6-promise@^3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@types/es6-promise/-/es6-promise-3.3.0.tgz#61b55e554fd807b563f158a7986ee53d3a5a5a9d"
   dependencies:
     es6-promise "*"
 
+"@types/resize-observer-browser@^0.1.2":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@types/resize-observer-browser/-/resize-observer-browser-0.1.3.tgz#5cca2445e6fc34a380760bd6ef8c492863469c47"
+  integrity sha512-3tGjLIDH8L57fWOfC7NVn/BbGQD7pXwbkk2+8Z4hK/S7kOIv1MUN4nkKjfx0qg4ctkukjzp3Bgr/Z+Hq5ZQZTQ==
+
 "@types/w3c-web-usb@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/w3c-web-usb/-/w3c-web-usb-1.0.1.tgz#3f59815df27c446341b6229359a7e1a7cc196d7d"
+
+"@types/webgl2@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@types/webgl2/-/webgl2-0.0.5.tgz#dd925e20ab8ace80eb4b1e46fda5b109c508fb0d"
+  integrity sha512-oGaKsBbxQOY5+aJFV3KECDhGaXt+yZJt2y/OZsnQGLRkH6Fvr7rv4pCt3SRH1somIHfej/c4u7NSpCyd9x+1Ow==
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
@@ -1903,6 +1931,18 @@ limiter@^1.0.5:
   resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.4.tgz#87c9c3972d389fdb0ba67a45aadbc5d2f8413bc1"
   integrity sha512-XCpr5bElgDI65vVgstP8TWjv6/QKWm9GU5UG0Pr5sLQ3QLo8NVKsioe+Jed5/3vFOe3IQuqE7DKwTvKQkjTHvg==
 
+lit-element@^2.2.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/lit-element/-/lit-element-2.3.1.tgz#73343b978fa1e73d60526c6bb6ad60f53a16c343"
+  integrity sha512-tOcUAmeO3BzwiQ7FGWdsshNvC0HVHcTFYw/TLIImmKwXYoV0E7zCBASa8IJ7DiP4cen/Yoj454gS0qqTnIGsFA==
+  dependencies:
+    lit-html "^1.1.1"
+
+lit-html@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.2.1.tgz#1fb933dc1e2ddc095f60b8086277d4fcd9d62cc8"
+  integrity sha512-GSJHHXMGLZDzTRq59IUfL9FCdAlGfqNp/dEa7k7aBaaWD+JKaCjsAk9KYm2V12ItonVaYx2dprN66Zdm1AuBTQ==
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -3337,6 +3377,11 @@ tfunk@^3.0.1:
   dependencies:
     chalk "^1.1.1"
     object-path "^0.9.0"
+
+three@^0.113.2:
+  version "0.113.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.113.2.tgz#04791d491fe4359330f9dbe7b767db18bfb35d67"
+  integrity sha512-x3vrKW41/UtbWbWduWKGlfIc043SvHWr3YltehYq+UGb9YglQ2oztNGvl2eut05JtNSmP11Mh3t6Xak5/0e+Fg==
 
 through2@^2.0.0:
   version "2.0.3"

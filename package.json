@@ -14,6 +14,7 @@
     "serve": "nf start"
   },
   "dependencies": {
+    "@google/model-viewer": "^0.9.0",
     "bsqr": "^1.0.1",
     "floyd-steinberg": "^1.0.6",
     "foreman": "^3.0.1",

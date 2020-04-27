@@ -5,12 +5,17 @@
             canvas {
                 border: solid 1px red;
             }
+            model-viewer { width: 320px; height: 50vh;  }
         </style>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
     </head>
     <body>
 
         <!-- <img src="./images/Michelangelo's_David_&#45;_Bayer.png"> -->
-        <img src="images/shrek.png">
+        <!-- <img src="images/shrek.png"> -->
+        <!-- MAKE A LOCAL IMAGE LOADER :D just add in an image upload web component from Polymer???? -->
+        <img src="images/tweet.png">
+        <!-- <img src="./images/gameboy&#45;printerboi.png"> -->
         <!-- <img src="./images/firework&#45;clipart&#45;dithered.png"> -->
         <!-- <img src="./images/unsplash&#45;portrait&#45;dithered.jpg"> -->
         <!-- <img src="./images/unsplash&#45;portrait&#45;dithered&#45;high&#45;exposure&#45;COMPRESSED.png"> -->
@@ -18,6 +23,7 @@
         <button id="auth">auth</button><br>
         <!-- <canvas width=360 height=432> -->
         <canvas width=360 height=552>
+        <!-- <canvas width=360 height=1104> -->
         <!-- <canvas width=360 height=864> <!&#45;&#45; quadrupally tall canvas &#45;&#45;> -->
         </canvas><br>
         <button id="print">print</button><br>
